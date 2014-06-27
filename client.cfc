@@ -45,11 +45,12 @@ component accessors="true" displayname="AppMarkable Client Library" {
 		var html = '';
 			html = html & '<h1>EMBEDDED VIEW</h1>';
 		var params = {
-						"paths": "*",
-						"bucket_key": arguments.bucket_key
-					};
+			"paths" = "*",
+			"bucket_key" = arguments.bucket_key
+		};
+
 		// first we need to snag a client token...
-		var token_reply = this.generateClientToken(arguments.consumer_id, params, arguments.application_id)
+		var token_reply = this.generateClientToken(arguments.consumer_id, params, arguments.application_id);
 
 		if(token_reply.successful){
 			html = html & '<h2>consumer_id: #arguments.consumer_id#</h2>';
@@ -75,7 +76,7 @@ component accessors="true" displayname="AppMarkable Client Library" {
 	* @CollectorId The Id of the collector this logger instance is for.
 	**/
 
-	public any function sendWebhook(required string consumer_id, required string bucket_key, required string event, struct headers={}, any body={}, string application_id=getApplication_id()){
+	public any function sendWebhook(required string consumer_id, required string bucket_key, required string event, struct headers=StructNew(), any body=StructNew(), string application_id=getApplication_id()){
 		// add the event name to the group of headers...
 		arguments.headers['Webhooksio-Incoming-Event'] = arguments.event;
 		return sendRequest(
@@ -124,7 +125,7 @@ component accessors="true" displayname="AppMarkable Client Library" {
 	private any function sendRequest(required string uri, 
 										      string method="GET", 
 										      any body="", 
-										      struct headers={},
+										      struct headers=StructNew(),
 										      string content_type="application/json"){
 		var results = {
 			"successful" = true,
