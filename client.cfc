@@ -1,4 +1,4 @@
-component accessors="true" displayname="AppMarkable Client Library" {
+component accessors="true" displayname="Webhooks.io Client Library" {
 
 	property name="api_endpoint";
 	property name="api_version";
@@ -41,7 +41,7 @@ component accessors="true" displayname="AppMarkable Client Library" {
 	* @CollectorId The Id of the collector this logger instance is for.
 	**/
 
-	public any function getEmbeddedView(required string consumer_id, 
+	public any function getEmbeddedViewHtml(required string consumer_id, 
 										required string bucket_key, 
 												 struct embed_options={},
 												 string application_id=getApplication_id()){
