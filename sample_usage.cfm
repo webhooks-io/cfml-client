@@ -1,37 +1,44 @@
 <cfscript>
-	c = new client(account_id='AC9e0d25944d5a4d2f8b0f0aef58a2d8bc',
-				   application_id='AP4306b25d87e541bb93909f0f556bce89',
-				   api_token='TO71f98cae473c48e5b87e74d7e57e3118',
-				   api_endpoint='http://10.211.55.2:8000',
+	c = new client(account_id='{{your_account_id}}',
+				   application_id='{{your_application_id}}',
+				   api_token='{{your_api_token}}}',
 				   include_parsed_response=true);
 
 // Display the embeded view.  This will also include getting the client token...
-writeOutput(c.getEmbeddedView('jasonfill11', 'development'));
+	embedded_view = c.getEmbeddedView('{{your_consumer_id}}', '{{your_bucket_key}}');
 
-// Gener
+	if(embedded_view.successful){
+		writeOutput(embedded_view.response_parsed.html);
+	}else{
+		writeDump(embedded_view);
+	}
+
+// Generate a client token...
 	params = {
 		"paths": "*",
 		"bucket_key": "development"
 	};
-	//writeDump(c.generateClientToken('jasonfill11', params));
+	//writeDump(c.generateClientToken('{{your_consumer_id}}', params));
 
+// check to see if a consumer is subscribed to a hook
 	params = {
 		"event_name": "invoice.create",
 		"bucket_key": "development"
 	};
 
-	//writeDump(c.checkSubscription('jasonfill11', params));
+	//writeDump(c.checkSubscription('{{your_consumer_id}}', params));
 
+// send a hook to a consumer...
 	body = {
-		"event_name": "invoice.create",
-		"bucket_key": "development"
+		"amount": 50.00,
+		"details": "Fee for my services"
 	};
 
 	headers = {
-		"My-Id": "123456"
+		"My-Special-Header-Id": "123456"
 	};
 
-//	writeDump(c.sendWebhook('jasonfill11', 'development', 'invoice.create', headers, body));
+//	writeDump(c.sendWebhook('{{your_consumer_id}}', '{{your_bucket_key}}', 'invoice.create', headers, body));
 
 	
 
