@@ -41,31 +41,19 @@ component accessors="true" displayname="AppMarkable Client Library" {
 	* @CollectorId The Id of the collector this logger instance is for.
 	**/
 
-	public any function getEmbeddedView(required string consumer_id, required string bucket_key, string application_id=getApplication_id()){
-		var html = '';
-			html = html & '<h1>EMBEDDED VIEW</h1>';
+	public any function getEmbeddedView(required string consumer_id, 
+										required string bucket_key, 
+												 struct embed_options={},
+												 string application_id=getApplication_id()){
 		var params = {
 			"paths" = "*",
 			"bucket_key" = arguments.bucket_key
 		};
 
-		// first we need to snag a client token...
-		var token_reply = this.generateClientToken(arguments.consumer_id, params, arguments.application_id);
-
-		if(token_reply.successful){
-			html = html & '<h2>consumer_id: #arguments.consumer_id#</h2>';
-			html = html & '<h2>bucket_key: #arguments.bucket_key#</h2>';
-			html = html & '<h2>application_id: #arguments.application_id#</h2>';
-			html = html & '<h2>client-bearer-token: #token_reply.response_parsed.token#</h2>';
-			html = html & '<h1>Sample HTML Output (above)</h1>';
-			html = html & '<textarea style="width: 100%; height:100px;">#html#</textarea>';
-		}else{
-			html = html & '<h2>Error getting the client token for the embedded view</h2>';
-		}
-
-
-			
-		return html;
+		return sendRequest(
+							uri="#getBase_url()#/applications/#arguments.application_id#/consumers/#arguments.consumer_id#/embedded-view-html",
+							method="POST",
+							body = params);
 	}
 
 	/**
