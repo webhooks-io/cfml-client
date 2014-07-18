@@ -1,5 +1,5 @@
 <cfscript>
-	c = new client(account_id='{{your_account_id}}',
+	c = new webhooksio(account_id='{{your_account_id}}',
 				   application_id='{{your_application_id}}',
 				   api_token='{{your_api_token}}}',
 				   include_parsed_response=true);
