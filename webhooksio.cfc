@@ -1,4 +1,4 @@
-component accessors="true" displayname="Webhooks.io Client Library" exends="base" {
+component accessors="true" displayname="Webhooks.io Client Library" extends="base" {
 
 	/*****************************************************************************/
 	/************************* Related Methods: Accounts **************************/

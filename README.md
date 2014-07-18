@@ -6,15 +6,9 @@ The [full documention can be found here](http://webhooks.io/docs/api) and this c
 Getting Started
 -----
 
-1\. Install the node module:
+1\. [Obtain your Webhooks.io API credentials](https://console.webhooks.io)
 
-```
-npm install webhooks-io-client
-```
-
-2\. [Obtain your Webhooks.io API credentials](https://console.webhooks.io)
-
-3\. Create a Webhooks.io Client Object:
+2\. Create a Webhooks.io Client Object:
 
 ```
 var wh_api = createObject('component', 'webhooks.client').init(options);
