@@ -476,96 +476,96 @@ component accessors="true" displayname="Webhooks.io Client Library" extends="bas
 	}
 
 	/*****************************************************************************/
-	/************************* Related Methods: Outputs **************************/
+	/************************* Related Methods: Destinations **************************/
 	/*****************************************************************************/
 
 	/**
-	 * Adds an output for an input.
+	 * Adds an destination for an input.
 	 * 
-	 * POST - /v1/accounts/:account_id/inputs/:input_id/outputs
+	 * POST - /v1/accounts/:account_id/inputs/:input_id/destinations
 	 * 
-	 * Full details can be found at http://webhooks.io/docs/api/#create-output
+	 * Full details can be found at http://webhooks.io/docs/api/#create-destination
 	 * 
-	 * @method createOutput
+	 * @method createDestination
 	 * @param {String} account_id 
 	 * @param {String} input_id 
 	 * @param {Object} params
 	 * @param {Function} callback
 	*/
-	public any function createOutput(required string account_id, required string input_id, struct params=StructNew()){
-		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/inputs/:input_id/outputs', [account_id, input_id]);
+	public any function createDestination(required string account_id, required string input_id, struct params=StructNew()){
+		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/inputs/:input_id/destinations', [account_id, input_id]);
 		return this.execute(endpoint=endpoint, method="POST", params=params);
 	}
 
 	/**
-	 * Updates the details of an output.
+	 * Updates the details of an destination.
 	 * 
-	 * PUT - /v1/accounts/:account_id/outputs/:output_id
+	 * PUT - /v1/accounts/:account_id/destinations/:destination_id
 	 * 
-	 * Full details can be found at http://webhooks.io/docs/api/#update-output
+	 * Full details can be found at http://webhooks.io/docs/api/#update-destination
 	 * 
-	 * @method updateOutput
+	 * @method updateDestination
 	 * @param {String} account_id 
-	 * @param {String} output_id 
+	 * @param {String} destination_id 
 	 * @param {Object} params
 	 * @param {Function} callback
 	*/
-	public any function updateOutput(required string account_id, required string output_id, struct params=StructNew()){
-		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/outputs/:output_id', [account_id, output_id]);
+	public any function updateDestination(required string account_id, required string destination_id, struct params=StructNew()){
+		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/destinations/:destination_id', [account_id, destination_id]);
 		return this.execute(endpoint=endpoint, method="PUT", params=params);
 	}
 
 	/**
-	 * Returns the details for a specfic output.
+	 * Returns the details for a specfic destination.
 	 * 
-	 * GET - /v1/accounts/:account_id/outputs/:output_id
+	 * GET - /v1/accounts/:account_id/destinations/:destination_id
 	 * 
-	 * Full details can be found at http://webhooks.io/docs/api/#get-output
+	 * Full details can be found at http://webhooks.io/docs/api/#get-destination
 	 * 
-	 * @method getOutput
+	 * @method getDestination
 	 * @param {String} account_id 
-	 * @param {String} output_id 
+	 * @param {String} destination_id 
 	 * @param {Object} params
 	 * @param {Function} callback
 	*/
-	public any function getOutput(required string account_id, required string output_id, struct params=StructNew()){
-		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/outputs/:output_id', [account_id, output_id]);
+	public any function getDestination(required string account_id, required string destination_id, struct params=StructNew()){
+		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/destinations/:destination_id', [account_id, destination_id]);
 		return this.execute(endpoint=endpoint, method="GET", params=params);
 	}
 
 	/**
-	 * Returns a collection of outputs.
+	 * Returns a collection of destinations.
 	 * 
-	 * GET - /v1/accounts/:account_id/inputs/:input_id/outputs
+	 * GET - /v1/accounts/:account_id/inputs/:input_id/destinations
 	 * 
-	 * Full details can be found at http://webhooks.io/docs/api/#list-output
+	 * Full details can be found at http://webhooks.io/docs/api/#list-destination
 	 * 
-	 * @method getOutputs
+	 * @method getDestinations
 	 * @param {String} account_id 
 	 * @param {String} input_id 
 	 * @param {Object} params
 	 * @param {Function} callback
 	*/
-	public any function getOutputs(required string account_id, required string input_id, struct params=StructNew()){
-		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/inputs/:input_id/outputs', [account_id, input_id]);
+	public any function getDestinations(required string account_id, required string input_id, struct params=StructNew()){
+		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/inputs/:input_id/destinations', [account_id, input_id]);
 		return this.execute(endpoint=endpoint, method="GET", params=params);
 	}
 
 	/**
-	 * Deletes an output.
+	 * Deletes an destination.
 	 * 
-	 * DELETE - /v1/accounts/:account_id/outputs/:output_id
+	 * DELETE - /v1/accounts/:account_id/destinations/:destination_id
 	 * 
-	 * Full details can be found at http://webhooks.io/docs/api/#delete-output
+	 * Full details can be found at http://webhooks.io/docs/api/#delete-destination
 	 * 
-	 * @method deleteOutput
+	 * @method deleteDestination
 	 * @param {String} account_id 
-	 * @param {String} output_id 
+	 * @param {String} destination_id 
 	 * @param {Object} params
 	 * @param {Function} callback
 	*/
-	public any function deleteOutput(required string account_id, required string output_id, struct params=StructNew()){
-		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/outputs/:output_id', [account_id, output_id]);
+	public any function deleteDestination(required string account_id, required string destination_id, struct params=StructNew()){
+		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/destinations/:destination_id', [account_id, destination_id]);
 		return this.execute(endpoint=endpoint, method="DELETE", params=params);
 	}
 
@@ -667,80 +667,80 @@ component accessors="true" displayname="Webhooks.io Client Library" extends="bas
 	}
 
 	/**
-	 * Returns all the outputs for the consumer of a given application.
+	 * Returns all the destinations for the consumer of a given application.
 	 * 
-	 * GET - /v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/outputs
+	 * GET - /v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations
 	 * 
-	 * Full details can be found at http://webhooks.io/docs/api/#list-consumer-outputs
+	 * Full details can be found at http://webhooks.io/docs/api/#list-consumer-destinations
 	 * 
-	 * @method getConsumerOutputs
+	 * @method getConsumerDestinations
 	 * @param {String} account_id 
 	 * @param {String} application_id 
 	 * @param {String} consumer_id 
 	 * @param {Object} params
 	 * @param {Function} callback
 	*/
-	public any function getConsumerOutputs(required string account_id, required string application_id, required string consumer_id, struct params=StructNew()){
-		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/outputs', [account_id, application_id, consumer_id]);
+	public any function getConsumerDestinations(required string account_id, required string application_id, required string consumer_id, struct params=StructNew()){
+		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations', [account_id, application_id, consumer_id]);
 		return this.execute(endpoint=endpoint, method="GET", params=params);
 	}
 
 	/**
-	 * Adds an output for the consumer of a given application.
+	 * Adds an destination for the consumer of a given application.
 	 * 
-	 * POST - /v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/outputs
+	 * POST - /v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations
 	 * 
-	 * Full details can be found at http://webhooks.io/docs/api/#create-consumer-output
+	 * Full details can be found at http://webhooks.io/docs/api/#create-consumer-destination
 	 * 
-	 * @method createConsumerOutput
+	 * @method createConsumerDestination
 	 * @param {String} account_id 
 	 * @param {String} application_id 
 	 * @param {String} consumer_id 
 	 * @param {Object} params
 	 * @param {Function} callback
 	*/
-	public any function createConsumerOutput(required string account_id, required string application_id, required string consumer_id, struct params=StructNew()){
-		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/outputs', [account_id, application_id, consumer_id]);
+	public any function createConsumerDestination(required string account_id, required string application_id, required string consumer_id, struct params=StructNew()){
+		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations', [account_id, application_id, consumer_id]);
 		return this.execute(endpoint=endpoint, method="POST", params=params);
 	}
 
 	/**
-	 * Updates an output for the consumer of a given application.
+	 * Updates an destination for the consumer of a given application.
 	 * 
-	 * PUT - /v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/outputs/:output_id
+	 * PUT - /v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations/:destination_id
 	 * 
-	 * Full details can be found at http://webhooks.io/docs/api/#update-consumer-output
+	 * Full details can be found at http://webhooks.io/docs/api/#update-consumer-destination
 	 * 
-	 * @method updateConsumerOutput
+	 * @method updateConsumerDestination
 	 * @param {String} account_id 
 	 * @param {String} application_id 
 	 * @param {String} consumer_id 
-	 * @param {String} output_id 
+	 * @param {String} destination_id 
 	 * @param {Object} params
 	 * @param {Function} callback
 	*/
-	public any function updateConsumerOutput(required string account_id, required string application_id, required string consumer_id, required string output_id, struct params=StructNew()){
-		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/outputs/:output_id', [account_id, application_id, consumer_id, output_id]);
+	public any function updateConsumerDestination(required string account_id, required string application_id, required string consumer_id, required string destination_id, struct params=StructNew()){
+		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations/:destination_id', [account_id, application_id, consumer_id, destination_id]);
 		return this.execute(endpoint=endpoint, method="PUT", params=params);
 	}
 
 	/**
-	 * Deletes an output for the consumer of a given application.
+	 * Deletes an destination for the consumer of a given application.
 	 * 
-	 * DELETE - /v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/outputs/:output_id
+	 * DELETE - /v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations/:destination_id
 	 * 
-	 * Full details can be found at http://webhooks.io/docs/api/#delete-consumer-output
+	 * Full details can be found at http://webhooks.io/docs/api/#delete-consumer-destination
 	 * 
-	 * @method deleteConsumerOutput
+	 * @method deleteConsumerDestination
 	 * @param {String} account_id 
 	 * @param {String} application_id 
 	 * @param {String} consumer_id 
-	 * @param {String} output_id 
+	 * @param {String} destination_id 
 	 * @param {Object} params
 	 * @param {Function} callback
 	*/
-	public any function deleteConsumerOutput(required string account_id, required string application_id, required string consumer_id, required string output_id, struct params=StructNew()){
-		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/outputs/:output_id', [account_id, application_id, consumer_id, output_id]);
+	public any function deleteConsumerDestination(required string account_id, required string application_id, required string consumer_id, required string destination_id, struct params=StructNew()){
+		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations/:destination_id', [account_id, application_id, consumer_id, destination_id]);
 		return this.execute(endpoint=endpoint, method="DELETE", params=params);
 	}
 
@@ -915,6 +915,64 @@ component accessors="true" displayname="Webhooks.io Client Library" extends="bas
 	}
 
 	/*****************************************************************************/
+	/************************* Related Methods: Messages **************************/
+	/*****************************************************************************/
+
+	/**
+	 * Returns the details regarding an incoming message.
+	 * 
+	 * GET - /v1/accounts/:account_id/incoming/:incoming_message_id
+	 * 
+	 * Full details can be found at http://webhooks.io/docs/api/#get-incoming-message
+	 * 
+	 * @method getIncomingMessage
+	 * @param {String} account_id 
+	 * @param {String} incoming_message_id 
+	 * @param {Object} params
+	 * @param {Function} callback
+	*/
+	public any function getIncomingMessage(required string account_id, required string incoming_message_id, struct params=StructNew()){
+		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/incoming/:incoming_message_id', [account_id, incoming_message_id]);
+		return this.execute(endpoint=endpoint, method="GET", params=params);
+	}
+
+	/**
+	 * Returns the details regarding an outgoing message, including all attempts
+	 * 
+	 * GET - /v1/accounts/:account_id/outgoing/:outgoing_message_id
+	 * 
+	 * Full details can be found at http://webhooks.io/docs/api/#get-outgoing-message
+	 * 
+	 * @method getOutgoingMessage
+	 * @param {String} account_id 
+	 * @param {String} outgoing_message_id 
+	 * @param {Object} params
+	 * @param {Function} callback
+	*/
+	public any function getOutgoingMessage(required string account_id, required string outgoing_message_id, struct params=StructNew()){
+		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/outgoing/:outgoing_message_id', [account_id, outgoing_message_id]);
+		return this.execute(endpoint=endpoint, method="GET", params=params);
+	}
+
+	/**
+	 * Returns the basic information regarding the status of the outgoing request.
+	 * 
+	 * GET - /v1/accounts/:account_id/outgoing/:outgoing_message_id/status
+	 * 
+	 * Full details can be found at http://webhooks.io/docs/api/#get-outgoing-message-status-details
+	 * 
+	 * @method getOutgoingMessageStatus
+	 * @param {String} account_id 
+	 * @param {String} outgoing_message_id 
+	 * @param {Object} params
+	 * @param {Function} callback
+	*/
+	public any function getOutgoingMessageStatus(required string account_id, required string outgoing_message_id, struct params=StructNew()){
+		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/outgoing/:outgoing_message_id/status', [account_id, outgoing_message_id]);
+		return this.execute(endpoint=endpoint, method="GET", params=params);
+	}
+
+	/*****************************************************************************/
 	/************************* Related Methods: Users **************************/
 	/*****************************************************************************/
 
@@ -950,6 +1008,24 @@ component accessors="true" displayname="Webhooks.io Client Library" extends="bas
 	public any function changePassword(required string account_id, required string user_id, struct params=StructNew()){
 		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/users/:user_id/change_password', [account_id, user_id]);
 		return this.execute(endpoint=endpoint, method="PUT", params=params);
+	}
+
+	/**
+	 * Provides a user a way to lookup their own API token.  This is used when using ST or client-bearer-token authentication so the user can get a longer lasting API token.  This operation can only be carried out for the currently authenticated user.
+	 * 
+	 * GET - /v1/accounts/:account_id/users/:user_id/api-token
+	 * 
+	 * Full details can be found at http://webhooks.io/docs/api/#lookup-api-token
+	 * 
+	 * @method getAPIToken
+	 * @param {String} account_id 
+	 * @param {String} user_id 
+	 * @param {Object} params
+	 * @param {Function} callback
+	*/
+	public any function getAPIToken(required string account_id, required string user_id, struct params=StructNew()){
+		var endpoint = this.expandEndpoint('/v1/accounts/:account_id/users/:user_id/api-token', [account_id, user_id]);
+		return this.execute(endpoint=endpoint, method="GET", params=params);
 	}
 
 	/**

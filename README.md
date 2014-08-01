@@ -494,14 +494,14 @@ var result = wh_api.deleteInput(account_id, input_idoptions);
 * ```options``` - Structure of the possible options.
 * ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
 
-###Outputs
+###Destinations
 
-####Create Output
+####Create Destination
 
-Adds an output for an input.
+Adds an destination for an input.
 
 ```
-var result = wh_api.createOutput(account_id, input_idoptions);
+var result = wh_api.createDestination(account_id, input_idoptions);
 ```
 #####Parameters
 
@@ -512,8 +512,8 @@ var result = wh_api.createOutput(account_id, input_idoptions);
 
 #####Options
 
-* ```name``` (required) - Name for the input. (example: My Bucket)
-* ```endpoint_url``` (required) - The status of the bucket, defaults to active.
+* ```name``` (required) - Name for the input. (example: My Final Destination)
+* ```endpoint_url``` (required) - The URL the messages should be sent to.
 * ```delivery_order``` - How the deliveries should operate.  Valid options are random or fifo.  The default is random (example: random)
 * ```status``` - The status of the bucket, defaults to active.
 * ```message_method``` - The HTTP method the message will be sent with.  If null the method will pass through. (example: GET)
@@ -527,24 +527,24 @@ var result = wh_api.createOutput(account_id, input_idoptions);
 * ```header_prefix``` - The prefix of the custom headers that will be included.  The default is Webhooks (example: Webhooks)
 * ```alert_on_failure``` - A comma delimited list of email addresses to alert when a webhook enters the failed status. (example: bob@mail.com,john@email.com)
 
-####Update Output
+####Update Destination
 
-Updates the details of an output.
+Updates the details of an destination.
 
 ```
-var result = wh_api.updateOutput(account_id, output_idoptions);
+var result = wh_api.updateDestination(account_id, destination_idoptions);
 ```
 #####Parameters
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
-* ```output_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
+* ```destination_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
 * ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
 
 #####Options
 
-* ```name``` (required) - Name for the input. (example: My Bucket)
-* ```endpoint_url``` (required) - The status of the bucket, defaults to active.
+* ```name``` (required) - Name for the input. (example: My Final Destination)
+* ```endpoint_url``` (required) - The URL the messages should be sent to.
 * ```delivery_order``` - How the deliveries should operate.  Valid options are random or fifo.  The default is random (example: random)
 * ```status``` - The status of the bucket, defaults to active.
 * ```message_method``` - The HTTP method the message will be sent with.  If null the method will pass through. (example: GET)
@@ -558,26 +558,26 @@ var result = wh_api.updateOutput(account_id, output_idoptions);
 * ```header_prefix``` - The prefix of the custom headers that will be included.  The default is Webhooks (example: Webhooks)
 * ```alert_on_failure``` - A comma delimited list of email addresses to alert when a webhook enters the failed status. (example: bob@mail.com,john@email.com)
 
-####Get Output
+####Get Destination
 
-Returns the details for a specfic output.
+Returns the details for a specfic destination.
 
 ```
-var result = wh_api.getOutput(account_id, output_idoptions);
+var result = wh_api.getDestination(account_id, destination_idoptions);
 ```
 #####Parameters
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
-* ```output_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
+* ```destination_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
 * ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
 
-####List Output
+####List Destination
 
-Returns a collection of outputs.
+Returns a collection of destinations.
 
 ```
-var result = wh_api.getOutputs(account_id, input_idoptions);
+var result = wh_api.getDestinations(account_id, input_idoptions);
 ```
 #####Parameters
 
@@ -588,19 +588,19 @@ var result = wh_api.getOutputs(account_id, input_idoptions);
 
 #####Options
 
-* ```output_key``` - Name for the bucket.
+* ```destination_key``` - Name for the bucket.
 
-####Delete Output
+####Delete Destination
 
-Deletes an output.
+Deletes an destination.
 
 ```
-var result = wh_api.deleteOutput(account_id, output_idoptions);
+var result = wh_api.deleteDestination(account_id, destination_idoptions);
 ```
 #####Parameters
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
-* ```output_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
+* ```destination_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
 * ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
 
@@ -689,32 +689,12 @@ var result = wh_api.deleteConsumer(account_id, application_id, consumer_idoption
 * ```options``` - Structure of the possible options.
 * ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
 
-####List Consumer outputs
+####List Consumer destinations
 
-Returns all the outputs for the consumer of a given application.
-
-```
-var result = wh_api.getConsumerOutputs(account_id, application_id, consumer_idoptions);
-```
-#####Parameters
-
-* ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
-* ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
-* ```consumer_id``` -  (example: my_customer_id)
-* ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
-#####Options
-
-* ```bucket_key``` (required) - The bucket key the output shoud be created for. (example: default)
-* ```output_key``` - Name for the bucket.
-
-####Create Consumer output
-
-Adds an output for the consumer of a given application.
+Returns all the destinations for the consumer of a given application.
 
 ```
-var result = wh_api.createConsumerOutput(account_id, application_id, consumer_idoptions);
+var result = wh_api.getConsumerDestinations(account_id, application_id, consumer_idoptions);
 ```
 #####Parameters
 
@@ -726,9 +706,29 @@ var result = wh_api.createConsumerOutput(account_id, application_id, consumer_id
 
 #####Options
 
-* ```application_version_id``` (required) - The version of the application the output should respond to. (example: Webhooks)
+* ```bucket_key``` (required) - The bucket key the destination shoud be created for. (example: default)
+* ```destination_key``` - Name for the bucket.
+
+####Create Consumer destination
+
+Adds an destination for the consumer of a given application.
+
+```
+var result = wh_api.createConsumerDestination(account_id, application_id, consumer_idoptions);
+```
+#####Parameters
+
+* ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
+* ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
+* ```consumer_id``` -  (example: my_customer_id)
+* ```options``` - Structure of the possible options.
+* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
+
+#####Options
+
+* ```application_version_id``` (required) - The version of the application the destination should respond to. (example: Webhooks)
 * ```name``` (required) - Name for the input. (example: My Bucket)
-* ```bucket_key``` (required) - The bucket key the output shoud be created for. (example: default)
+* ```bucket_key``` (required) - The bucket key the destination shoud be created for. (example: default)
 * ```endpoint_url``` (required) - The status of the bucket, defaults to active.
 * ```delivery_order``` - How the deliveries should operate.  Valid options are random or fifo.  The default is random (example: random)
 * ```status``` - The status of the bucket, defaults to active.
@@ -743,25 +743,25 @@ var result = wh_api.createConsumerOutput(account_id, application_id, consumer_id
 * ```header_prefix``` - The prefix of the custom headers that will be included.  The default is Webhooks (example: Webhooks)
 * ```alert_on_failure``` - A comma delimited list of email addresses to alert when a webhook enters the failed status. (example: bob@mail.com,john@email.com)
 
-####Update Consumer output
+####Update Consumer destination
 
-Updates an output for the consumer of a given application.
+Updates an destination for the consumer of a given application.
 
 ```
-var result = wh_api.updateConsumerOutput(account_id, application_id, consumer_id, output_idoptions);
+var result = wh_api.updateConsumerDestination(account_id, application_id, consumer_id, destination_idoptions);
 ```
 #####Parameters
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```consumer_id``` -  (example: my_customer_id)
-* ```output_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
+* ```destination_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
 * ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
 
 #####Options
 
-* ```application_version_id``` (required) - The version of the application the output should respond to. (example: Webhooks)
+* ```application_version_id``` (required) - The version of the application the destination should respond to. (example: Webhooks)
 * ```name``` (required) - Name for the input. (example: My Bucket)
 * ```endpoint_url``` (required) - The status of the bucket, defaults to active.
 * ```delivery_order``` - How the deliveries should operate.  Valid options are random or fifo.  The default is random (example: random)
@@ -777,19 +777,19 @@ var result = wh_api.updateConsumerOutput(account_id, application_id, consumer_id
 * ```header_prefix``` - The prefix of the custom headers that will be included.  The default is Webhooks (example: Webhooks)
 * ```alert_on_failure``` - A comma delimited list of email addresses to alert when a webhook enters the failed status. (example: bob@mail.com,john@email.com)
 
-####Delete Consumer output
+####Delete Consumer destination
 
-Deletes an output for the consumer of a given application.
+Deletes an destination for the consumer of a given application.
 
 ```
-var result = wh_api.deleteConsumerOutput(account_id, application_id, consumer_id, output_idoptions);
+var result = wh_api.deleteConsumerDestination(account_id, application_id, consumer_id, destination_idoptions);
 ```
 #####Parameters
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```consumer_id``` -  (example: my_customer_id)
-* ```output_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
+* ```destination_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
 * ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
 
@@ -843,7 +843,7 @@ var result = wh_api.getConsumerSubscription(account_id, application_id, consumer
 
 * ```bucket_key``` (required) - The bucket key the subscription should be checked for. (example: development)
 * ```event_name``` (required) - The name of the event to check.
-* ```include_output_detail``` - If the details of each subscribed output should be returned.
+* ```include_destination_detail``` - If the details of each subscribed destination should be returned.
 
 ####Consumer Request Log
 
@@ -864,7 +864,7 @@ var result = wh_api.getConsumerRequestLog(account_id, application_id, consumer_i
 
 * ```start_date``` - The start date for the data.  This can be an exact UTC date or a texted based time period.  Valid text time periods can be found at: http://sugarjs.com/date_formats#text_formats
 * ```end_date``` - The end date for the data.  This can be an exact UTC date or a texted based time period.  Valid text time periods can be found at: http://sugarjs.com/date_formats#text_formats
-* ```output_id``` - 
+* ```destination_id``` - 
 * ```http_status``` - 
 
 ####Create Client Token
@@ -928,8 +928,9 @@ var result = wh_api.getOverviewReport(account_idoptions);
 * ```start_date``` (required) - The start date for the data.
 * ```end_date``` (required) - The end date for the data.
 * ```precision``` (required) - The end date for the data.
+* ```application_id``` - The application id the data should be filtered with.
 * ```bucket_id``` - The end date for the data.
-* ```output_id``` - The end date for the data.
+* ```destination_id``` - The end date for the data.
 * ```input_id``` - The end date for the data.
 * ```include_sub_accounts``` - If sub account data should be included.
 
@@ -951,7 +952,7 @@ var result = wh_api.getSummaryReport(account_idoptions);
 * ```start_date``` - The start date for the data.
 * ```end_date``` - The end date for the data.
 * ```bucket_id``` - The end date for the data.
-* ```output_id``` - The end date for the data.
+* ```destination_id``` - The end date for the data.
 * ```input_id``` - The end date for the data.
 
 ####Request Log
@@ -974,6 +975,54 @@ var result = wh_api.getRequestLog(account_idoptions);
 * ```input_id``` - 
 * ```bucket_id``` - 
 * ```http_status``` - 
+
+###Messages
+
+####Get Incoming Message
+
+Returns the details regarding an incoming message.
+
+```
+var result = wh_api.getIncomingMessage(account_id, incoming_message_idoptions);
+```
+#####Parameters
+
+* ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
+* ```incoming_message_id``` -  (example: IMe987d754d82a419e8c54c2185ed0ef29)
+* ```options``` - Structure of the possible options.
+* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
+
+#####Options
+
+* ```include_outgoing_messages``` - If the outgoing messages should be included as well.
+
+####Get Outgoing Message
+
+Returns the details regarding an outgoing message, including all attempts
+
+```
+var result = wh_api.getOutgoingMessage(account_id, outgoing_message_idoptions);
+```
+#####Parameters
+
+* ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
+* ```outgoing_message_id``` -  (example: OMe987d754d82a419e8c54c2185ed0ef29)
+* ```options``` - Structure of the possible options.
+* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
+
+####Get Outgoing Message Status Details
+
+Returns the basic information regarding the status of the outgoing request.
+
+```
+var result = wh_api.getOutgoingMessageStatus(account_id, outgoing_message_idoptions);
+```
+#####Parameters
+
+* ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
+* ```outgoing_message_id``` -  (example: OMe987d754d82a419e8c54c2185ed0ef29)
+* ```options``` - Structure of the possible options.
+* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
 
 ###Users
 
@@ -1014,6 +1063,20 @@ var result = wh_api.changePassword(account_id, user_idoptions);
 * ```new_confirm_password``` (required) - A confirmation of the new password for their account.
 * ```change_key``` - The code that was supplied in the password change email to allow them to change their email.
 * ```existing_password``` - The current password on the user account.
+
+####Lookup API Token
+
+Provides a user a way to lookup their own API token.  This is used when using ST or client-bearer-token authentication so the user can get a longer lasting API token.  This operation can only be carried out for the currently authenticated user.
+
+```
+var result = wh_api.getAPIToken(account_id, user_idoptions);
+```
+#####Parameters
+
+* ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
+* ```user_id``` -  (example: USe987d754d82a419e8c54c2185ed0ef29)
+* ```options``` - Structure of the possible options.
+* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
 
 ####Reset Password
 
