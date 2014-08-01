@@ -54,7 +54,7 @@ var result = wh_api.registerAccount(options);
 Creates a sub account.
 
 ```
-var result = wh_api.createSubAccount(account_idoptions);
+var result = wh_api.createSubAccount(account_id, options);
 ```
 #####Parameters
 
@@ -72,7 +72,7 @@ var result = wh_api.createSubAccount(account_idoptions);
 Lists all sub accounts user an account.
 
 ```
-var result = wh_api.getSubAccounts(account_idoptions);
+var result = wh_api.getSubAccounts(account_id, options);
 ```
 #####Parameters
 
@@ -89,7 +89,7 @@ var result = wh_api.getSubAccounts(account_idoptions);
 Returns the details of a specfic account.
 
 ```
-var result = wh_api.getAccount(account_idoptions);
+var result = wh_api.getAccount(account_id, options);
 ```
 #####Parameters
 
@@ -102,7 +102,7 @@ var result = wh_api.getAccount(account_idoptions);
 Updates the details on an account.
 
 ```
-var result = wh_api.updateAccount(account_idoptions);
+var result = wh_api.updateAccount(account_id, options);
 ```
 #####Parameters
 
@@ -120,7 +120,7 @@ var result = wh_api.updateAccount(account_idoptions);
 Deletes an account or sub account.
 
 ```
-var result = wh_api.deleteAccount(account_idoptions);
+var result = wh_api.deleteAccount(account_id, options);
 ```
 #####Parameters
 
@@ -135,7 +135,7 @@ var result = wh_api.deleteAccount(account_idoptions);
 Adds an application to an account
 
 ```
-var result = wh_api.createApplication(account_idoptions);
+var result = wh_api.createApplication(account_id, options);
 ```
 #####Parameters
 
@@ -159,7 +159,7 @@ var result = wh_api.createApplication(account_idoptions);
 Updates an Application.
 
 ```
-var result = wh_api.updateApplication(account_id, application_idoptions);
+var result = wh_api.updateApplication(account_id, application_id, options);
 ```
 #####Parameters
 
@@ -184,7 +184,7 @@ var result = wh_api.updateApplication(account_id, application_idoptions);
 Returns the details for a specfic application.
 
 ```
-var result = wh_api.getApplication(account_id, application_idoptions);
+var result = wh_api.getApplication(account_id, application_id, options);
 ```
 #####Parameters
 
@@ -198,7 +198,7 @@ var result = wh_api.getApplication(account_id, application_idoptions);
 Returns a collection of applications for an account.
 
 ```
-var result = wh_api.getApplications(account_idoptions);
+var result = wh_api.getApplications(account_id, options);
 ```
 #####Parameters
 
@@ -211,7 +211,7 @@ var result = wh_api.getApplications(account_idoptions);
 Deletes an application.
 
 ```
-var result = wh_api.deleteApplication(account_id, application_idoptions);
+var result = wh_api.deleteApplication(account_id, application_id, options);
 ```
 #####Parameters
 
@@ -225,7 +225,7 @@ var result = wh_api.deleteApplication(account_id, application_idoptions);
 Adds a version to an application.
 
 ```
-var result = wh_api.createApplicationVersion(account_id, application_idoptions);
+var result = wh_api.createApplicationVersion(account_id, application_id, options);
 ```
 #####Parameters
 
@@ -247,7 +247,7 @@ var result = wh_api.createApplicationVersion(account_id, application_idoptions);
 Updates an application version.
 
 ```
-var result = wh_api.updateApplicationVersion(account_id, application_id, application_version_idoptions);
+var result = wh_api.updateApplicationVersion(account_id, application_id, application_version_id, options);
 ```
 #####Parameters
 
@@ -270,7 +270,7 @@ var result = wh_api.updateApplicationVersion(account_id, application_id, applica
 Returns the details for a specfic application version.
 
 ```
-var result = wh_api.getApplicationVersion(account_id, application_id, application_version_idoptions);
+var result = wh_api.getApplicationVersion(account_id, application_id, application_version_id, options);
 ```
 #####Parameters
 
@@ -285,7 +285,7 @@ var result = wh_api.getApplicationVersion(account_id, application_id, applicatio
 Returns a collection of versions for an application.
 
 ```
-var result = wh_api.getApplicationVersions(account_id, application_idoptions);
+var result = wh_api.getApplicationVersions(account_id, application_id, options);
 ```
 #####Parameters
 
@@ -299,7 +299,7 @@ var result = wh_api.getApplicationVersions(account_id, application_idoptions);
 Deletes a version for an application.
 
 ```
-var result = wh_api.deleteApplicationVersion(account_id, application_id, application_version_idoptions);
+var result = wh_api.deleteApplicationVersion(account_id, application_id, application_version_id, options);
 ```
 #####Parameters
 
@@ -316,7 +316,7 @@ var result = wh_api.deleteApplicationVersion(account_id, application_id, applica
 Adds a bucket to an account
 
 ```
-var result = wh_api.createBucket(account_idoptions);
+var result = wh_api.createBucket(account_id, options);
 ```
 #####Parameters
 
@@ -334,7 +334,7 @@ var result = wh_api.createBucket(account_idoptions);
 Updates a bucket.
 
 ```
-var result = wh_api.updateBucket(account_id, bucket_idoptions);
+var result = wh_api.updateBucket(account_id, bucket_id, options);
 ```
 #####Parameters
 
@@ -353,7 +353,7 @@ var result = wh_api.updateBucket(account_id, bucket_idoptions);
 Returns the details for a specfic bucket.
 
 ```
-var result = wh_api.getBucket(account_id, bucket_idoptions);
+var result = wh_api.getBucket(account_id, bucket_id, options);
 ```
 #####Parameters
 
@@ -367,7 +367,7 @@ var result = wh_api.getBucket(account_id, bucket_idoptions);
 Returns a collection of buckets for an account.
 
 ```
-var result = wh_api.getBuckets(account_idoptions);
+var result = wh_api.getBuckets(account_id, options);
 ```
 #####Parameters
 
@@ -380,7 +380,7 @@ var result = wh_api.getBuckets(account_idoptions);
 Deletes a bucket.
 
 ```
-var result = wh_api.deleteBucket(account_id, bucket_idoptions);
+var result = wh_api.deleteBucket(account_id, bucket_id, options);
 ```
 #####Parameters
 
@@ -396,7 +396,7 @@ var result = wh_api.deleteBucket(account_id, bucket_idoptions);
 Adds an input to an account
 
 ```
-var result = wh_api.createInput(account_idoptions);
+var result = wh_api.createInput(account_id, options);
 ```
 #####Parameters
 
@@ -424,7 +424,7 @@ var result = wh_api.createInput(account_idoptions);
 Updates the details for an input.
 
 ```
-var result = wh_api.updateInput(account_id, input_idoptions);
+var result = wh_api.updateInput(account_id, input_id, options);
 ```
 #####Parameters
 
@@ -452,7 +452,7 @@ var result = wh_api.updateInput(account_id, input_idoptions);
 Returns the details for a specfic input.
 
 ```
-var result = wh_api.getInput(account_id, input_idoptions);
+var result = wh_api.getInput(account_id, input_id, options);
 ```
 #####Parameters
 
@@ -466,7 +466,7 @@ var result = wh_api.getInput(account_id, input_idoptions);
 Returns a collection of inputs for an account.
 
 ```
-var result = wh_api.getInputs(account_id, bucket_idoptions);
+var result = wh_api.getInputs(account_id, bucket_id, options);
 ```
 #####Parameters
 
@@ -485,7 +485,7 @@ var result = wh_api.getInputs(account_id, bucket_idoptions);
 Deletes an input.
 
 ```
-var result = wh_api.deleteInput(account_id, input_idoptions);
+var result = wh_api.deleteInput(account_id, input_id, options);
 ```
 #####Parameters
 
@@ -501,7 +501,7 @@ var result = wh_api.deleteInput(account_id, input_idoptions);
 Adds an destination for an input.
 
 ```
-var result = wh_api.createDestination(account_id, input_idoptions);
+var result = wh_api.createDestination(account_id, input_id, options);
 ```
 #####Parameters
 
@@ -532,7 +532,7 @@ var result = wh_api.createDestination(account_id, input_idoptions);
 Updates the details of an destination.
 
 ```
-var result = wh_api.updateDestination(account_id, destination_idoptions);
+var result = wh_api.updateDestination(account_id, destination_id, options);
 ```
 #####Parameters
 
@@ -563,7 +563,7 @@ var result = wh_api.updateDestination(account_id, destination_idoptions);
 Returns the details for a specfic destination.
 
 ```
-var result = wh_api.getDestination(account_id, destination_idoptions);
+var result = wh_api.getDestination(account_id, destination_id, options);
 ```
 #####Parameters
 
@@ -577,7 +577,7 @@ var result = wh_api.getDestination(account_id, destination_idoptions);
 Returns a collection of destinations.
 
 ```
-var result = wh_api.getDestinations(account_id, input_idoptions);
+var result = wh_api.getDestinations(account_id, input_id, options);
 ```
 #####Parameters
 
@@ -595,7 +595,7 @@ var result = wh_api.getDestinations(account_id, input_idoptions);
 Deletes an destination.
 
 ```
-var result = wh_api.deleteDestination(account_id, destination_idoptions);
+var result = wh_api.deleteDestination(account_id, destination_id, options);
 ```
 #####Parameters
 
@@ -611,7 +611,7 @@ var result = wh_api.deleteDestination(account_id, destination_idoptions);
 Creates a consumer for an application
 
 ```
-var result = wh_api.createConsumer(account_id, application_idoptions);
+var result = wh_api.createConsumer(account_id, application_id, options);
 ```
 #####Parameters
 
@@ -631,7 +631,7 @@ var result = wh_api.createConsumer(account_id, application_idoptions);
 Returns a list of all the consumers for a particular application.
 
 ```
-var result = wh_api.getConsumers(account_id, application_idoptions);
+var result = wh_api.getConsumers(account_id, application_id, options);
 ```
 #####Parameters
 
@@ -645,7 +645,7 @@ var result = wh_api.getConsumers(account_id, application_idoptions);
 Updates the details for a particular consumer.
 
 ```
-var result = wh_api.updateConsumer(account_id, application_id, consumer_idoptions);
+var result = wh_api.updateConsumer(account_id, application_id, consumer_id, options);
 ```
 #####Parameters
 
@@ -664,7 +664,7 @@ var result = wh_api.updateConsumer(account_id, application_id, consumer_idoption
 Get the details for a particular consumer.
 
 ```
-var result = wh_api.getConsumer(account_id, application_id, consumer_idoptions);
+var result = wh_api.getConsumer(account_id, application_id, consumer_id, options);
 ```
 #####Parameters
 
@@ -679,7 +679,7 @@ var result = wh_api.getConsumer(account_id, application_id, consumer_idoptions);
 Removes a consumer from a particular application.
 
 ```
-var result = wh_api.deleteConsumer(account_id, application_id, consumer_idoptions);
+var result = wh_api.deleteConsumer(account_id, application_id, consumer_id, options);
 ```
 #####Parameters
 
@@ -694,7 +694,7 @@ var result = wh_api.deleteConsumer(account_id, application_id, consumer_idoption
 Returns all the destinations for the consumer of a given application.
 
 ```
-var result = wh_api.getConsumerDestinations(account_id, application_id, consumer_idoptions);
+var result = wh_api.getConsumerDestinations(account_id, application_id, consumer_id, options);
 ```
 #####Parameters
 
@@ -714,7 +714,7 @@ var result = wh_api.getConsumerDestinations(account_id, application_id, consumer
 Adds an destination for the consumer of a given application.
 
 ```
-var result = wh_api.createConsumerDestination(account_id, application_id, consumer_idoptions);
+var result = wh_api.createConsumerDestination(account_id, application_id, consumer_id, options);
 ```
 #####Parameters
 
@@ -748,7 +748,7 @@ var result = wh_api.createConsumerDestination(account_id, application_id, consum
 Updates an destination for the consumer of a given application.
 
 ```
-var result = wh_api.updateConsumerDestination(account_id, application_id, consumer_id, destination_idoptions);
+var result = wh_api.updateConsumerDestination(account_id, application_id, consumer_id, destination_id, options);
 ```
 #####Parameters
 
@@ -782,7 +782,7 @@ var result = wh_api.updateConsumerDestination(account_id, application_id, consum
 Deletes an destination for the consumer of a given application.
 
 ```
-var result = wh_api.deleteConsumerDestination(account_id, application_id, consumer_id, destination_idoptions);
+var result = wh_api.deleteConsumerDestination(account_id, application_id, consumer_id, destination_id, options);
 ```
 #####Parameters
 
@@ -798,7 +798,7 @@ var result = wh_api.deleteConsumerDestination(account_id, application_id, consum
 Returns all the buckets for the consumer of a given application.
 
 ```
-var result = wh_api.getConsumerBuckets(account_id, application_id, consumer_idoptions);
+var result = wh_api.getConsumerBuckets(account_id, application_id, consumer_id, options);
 ```
 #####Parameters
 
@@ -813,7 +813,7 @@ var result = wh_api.getConsumerBuckets(account_id, application_id, consumer_idop
 Sends a webhook to a particular consumer of an application for the given bucket_key.
 
 ```
-var result = wh_api.sendConsumerWebhookRequest(account_id, application_id, consumer_id, bucket_keyoptions);
+var result = wh_api.sendConsumerWebhookRequest(account_id, application_id, consumer_id, bucket_key, options);
 ```
 #####Parameters
 
@@ -829,7 +829,7 @@ var result = wh_api.sendConsumerWebhookRequest(account_id, application_id, consu
 Checks to see if the consumer is subscribed to a given event or set of events.  If the event query param is not passed the complete list of events will be returned.
 
 ```
-var result = wh_api.getConsumerSubscription(account_id, application_id, consumer_idoptions);
+var result = wh_api.getConsumerSubscription(account_id, application_id, consumer_id, options);
 ```
 #####Parameters
 
@@ -850,7 +850,7 @@ var result = wh_api.getConsumerSubscription(account_id, application_id, consumer
 Returns a log of all messages for a given consumer.
 
 ```
-var result = wh_api.getConsumerRequestLog(account_id, application_id, consumer_idoptions);
+var result = wh_api.getConsumerRequestLog(account_id, application_id, consumer_id, options);
 ```
 #####Parameters
 
@@ -872,7 +872,7 @@ var result = wh_api.getConsumerRequestLog(account_id, application_id, consumer_i
 Generates a client token to be used with the embedded views.
 
 ```
-var result = wh_api.createClientToken(account_id, application_id, consumer_idoptions);
+var result = wh_api.createClientToken(account_id, application_id, consumer_id, options);
 ```
 #####Parameters
 
@@ -892,7 +892,7 @@ var result = wh_api.createClientToken(account_id, application_id, consumer_idopt
 Returns the HTML for the embedded view.
 
 ```
-var result = wh_api.getEmbeddedViewHtml(account_id, application_id, consumer_idoptions);
+var result = wh_api.getEmbeddedViewHtml(account_id, application_id, consumer_id, options);
 ```
 #####Parameters
 
@@ -915,7 +915,7 @@ var result = wh_api.getEmbeddedViewHtml(account_id, application_id, consumer_ido
 Returns a general overview.
 
 ```
-var result = wh_api.getOverviewReport(account_idoptions);
+var result = wh_api.getOverviewReport(account_id, options);
 ```
 #####Parameters
 
@@ -939,7 +939,7 @@ var result = wh_api.getOverviewReport(account_idoptions);
 Returns a general summary report.
 
 ```
-var result = wh_api.getSummaryReport(account_idoptions);
+var result = wh_api.getSummaryReport(account_id, options);
 ```
 #####Parameters
 
@@ -960,7 +960,7 @@ var result = wh_api.getSummaryReport(account_idoptions);
 Returns a log of all messages.
 
 ```
-var result = wh_api.getRequestLog(account_idoptions);
+var result = wh_api.getRequestLog(account_id, options);
 ```
 #####Parameters
 
@@ -983,7 +983,7 @@ var result = wh_api.getRequestLog(account_idoptions);
 Returns the details regarding an incoming message.
 
 ```
-var result = wh_api.getIncomingMessage(account_id, incoming_message_idoptions);
+var result = wh_api.getIncomingMessage(account_id, incoming_message_id, options);
 ```
 #####Parameters
 
@@ -1001,7 +1001,7 @@ var result = wh_api.getIncomingMessage(account_id, incoming_message_idoptions);
 Returns the details regarding an outgoing message, including all attempts
 
 ```
-var result = wh_api.getOutgoingMessage(account_id, outgoing_message_idoptions);
+var result = wh_api.getOutgoingMessage(account_id, outgoing_message_id, options);
 ```
 #####Parameters
 
@@ -1015,7 +1015,7 @@ var result = wh_api.getOutgoingMessage(account_id, outgoing_message_idoptions);
 Returns the basic information regarding the status of the outgoing request.
 
 ```
-var result = wh_api.getOutgoingMessageStatus(account_id, outgoing_message_idoptions);
+var result = wh_api.getOutgoingMessageStatus(account_id, outgoing_message_id, options);
 ```
 #####Parameters
 
@@ -1048,7 +1048,7 @@ var result = wh_api.login(options);
 Allows a user to change their password.  Either the existing password or change key must be passed...and must match in order for this call to be successful.
 
 ```
-var result = wh_api.changePassword(account_id, user_idoptions);
+var result = wh_api.changePassword(account_id, user_id, options);
 ```
 #####Parameters
 
@@ -1069,7 +1069,7 @@ var result = wh_api.changePassword(account_id, user_idoptions);
 Provides a user a way to lookup their own API token.  This is used when using ST or client-bearer-token authentication so the user can get a longer lasting API token.  This operation can only be carried out for the currently authenticated user.
 
 ```
-var result = wh_api.getAPIToken(account_id, user_idoptions);
+var result = wh_api.getAPIToken(account_id, user_id, options);
 ```
 #####Parameters
 
@@ -1099,7 +1099,7 @@ var result = wh_api.resetPassword(options);
 Looks up the meta data for the password change key.
 
 ```
-var result = wh_api.lookupPasswordChangeKey(password_change_keyoptions);
+var result = wh_api.lookupPasswordChangeKey(password_change_key, options);
 ```
 #####Parameters
 
@@ -1112,7 +1112,7 @@ var result = wh_api.lookupPasswordChangeKey(password_change_keyoptions);
 Adds a user to an account.
 
 ```
-var result = wh_api.createUser(account_idoptions);
+var result = wh_api.createUser(account_id, options);
 ```
 #####Parameters
 
@@ -1135,7 +1135,7 @@ var result = wh_api.createUser(account_idoptions);
 Updates a users account information.
 
 ```
-var result = wh_api.updateUser(account_id, user_idoptions);
+var result = wh_api.updateUser(account_id, user_id, options);
 ```
 #####Parameters
 
@@ -1158,7 +1158,7 @@ var result = wh_api.updateUser(account_id, user_idoptions);
 Returns the details for a specfic user.
 
 ```
-var result = wh_api.getUser(account_id, user_idoptions);
+var result = wh_api.getUser(account_id, user_id, options);
 ```
 #####Parameters
 
@@ -1172,7 +1172,7 @@ var result = wh_api.getUser(account_id, user_idoptions);
 Returns a collection of users.
 
 ```
-var result = wh_api.getUsers(account_id, user_idoptions);
+var result = wh_api.getUsers(account_id, user_id, options);
 ```
 #####Parameters
 
@@ -1186,7 +1186,7 @@ var result = wh_api.getUsers(account_id, user_idoptions);
 Deletes a user.
 
 ```
-var result = wh_api.deleteUser(account_id, user_idoptions);
+var result = wh_api.deleteUser(account_id, user_id, options);
 ```
 #####Parameters
 
@@ -1200,7 +1200,7 @@ var result = wh_api.deleteUser(account_id, user_idoptions);
 Handles validating the email address once the user has clicked the validation link in an email.
 
 ```
-var result = wh_api.verifyEmailAddress(email_verification_keyoptions);
+var result = wh_api.verifyEmailAddress(email_verification_key, options);
 ```
 #####Parameters
 
@@ -1213,7 +1213,7 @@ var result = wh_api.verifyEmailAddress(email_verification_keyoptions);
 Resends a verification email for a user.
 
 ```
-var result = wh_api.resendVerificationEmail(account_id, user_idoptions);
+var result = wh_api.resendVerificationEmail(account_id, user_id, options);
 ```
 #####Parameters
 
@@ -1253,7 +1253,7 @@ var result = wh_api.getPlans(options);
 Returns the details of a specific plan.
 
 ```
-var result = wh_api.getPlan(plan_idoptions);
+var result = wh_api.getPlan(plan_id, options);
 ```
 #####Parameters
 
@@ -1290,7 +1290,7 @@ var result = wh_api.getRetryPolicies(options);
 Returns the details of a specific retry policy.
 
 ```
-var result = wh_api.getRetryPolicy(policy_idoptions);
+var result = wh_api.getRetryPolicy(policy_id, options);
 ```
 #####Parameters
 
