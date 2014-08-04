@@ -29,8 +29,6 @@ var result = wh_api.registerAccount(options);
 #####Parameters
 
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```name``` - Account/Company name (example: Sample Company, LLC)
@@ -60,8 +58,6 @@ var result = wh_api.createSubAccount(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```name``` (required) - First name of the primary user on the account. (example: Bob)
@@ -78,8 +74,6 @@ var result = wh_api.getSubAccounts(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```account_key``` - Identifier from another system. (example: acct123456789)
@@ -95,8 +89,6 @@ var result = wh_api.getAccount(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Update Account
 
 Updates the details on an account.
@@ -108,8 +100,6 @@ var result = wh_api.updateAccount(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```name``` (required) - Friendly name for the account. (example: Bob)
@@ -126,8 +116,6 @@ var result = wh_api.deleteAccount(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ###Applications
 
 ####Create Application
@@ -141,8 +129,6 @@ var result = wh_api.createApplication(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```name``` (required) - Name for the bucket. (example: My Awesome Application)
@@ -166,8 +152,6 @@ var result = wh_api.updateApplication(account_id, application_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```name``` (required) - Name for the bucket. (example: My Awesome Application)
@@ -191,8 +175,6 @@ var result = wh_api.getApplication(account_id, application_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####List Applications
 
 Returns a collection of applications for an account.
@@ -204,8 +186,6 @@ var result = wh_api.getApplications(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Delete Application
 
 Deletes an application.
@@ -218,8 +198,6 @@ var result = wh_api.deleteApplication(account_id, application_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Create Application Version
 
 Adds a version to an application.
@@ -232,8 +210,6 @@ var result = wh_api.createApplicationVersion(account_id, application_id, options
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```key``` (required) - The key/id for this version. (example: 1.1)
@@ -255,8 +231,6 @@ var result = wh_api.updateApplicationVersion(account_id, application_id, applica
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```application_version_id``` -  (example: AVe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```key``` (required) - The key/id for this version. (example: 1.1)
@@ -278,8 +252,6 @@ var result = wh_api.getApplicationVersion(account_id, application_id, applicatio
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```application_version_id``` -  (example: AVe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####List Application Versions
 
 Returns a collection of versions for an application.
@@ -292,8 +264,6 @@ var result = wh_api.getApplicationVersions(account_id, application_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Delete Application Version
 
 Deletes a version for an application.
@@ -307,8 +277,6 @@ var result = wh_api.deleteApplicationVersion(account_id, application_id, applica
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```application_version_id``` -  (example: AVe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ###Buckets
 
 ####Create Bucket
@@ -322,8 +290,6 @@ var result = wh_api.createBucket(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```name``` (required) - Name for the bucket. (example: My Bucket)
@@ -341,8 +307,6 @@ var result = wh_api.updateBucket(account_id, bucket_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```bucket_id``` -  (example: BUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```name``` (required) - Name for the bucket. (example: My Bucket)
@@ -360,8 +324,6 @@ var result = wh_api.getBucket(account_id, bucket_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```bucket_id``` -  (example: BUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####List Buckets
 
 Returns a collection of buckets for an account.
@@ -373,8 +335,6 @@ var result = wh_api.getBuckets(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Delete Bucket
 
 Deletes a bucket.
@@ -387,8 +347,6 @@ var result = wh_api.deleteBucket(account_id, bucket_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```bucket_id``` -  (example: BUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ###Inputs
 
 ####Create Input
@@ -402,8 +360,6 @@ var result = wh_api.createInput(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```bucket_id``` (required) - The bucket the input belongs to (example: BUe987d754d82a419e8c54c2185ed0ef29)
@@ -431,8 +387,6 @@ var result = wh_api.updateInput(account_id, input_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```input_id``` -  (example: INe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```name``` (required) - Name for the input. (example: My Bucket)
@@ -459,8 +413,6 @@ var result = wh_api.getInput(account_id, input_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```input_id``` -  (example: INe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####List Inputs
 
 Returns a collection of inputs for an account.
@@ -473,8 +425,6 @@ var result = wh_api.getInputs(account_id, bucket_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```bucket_id``` -  (example: BUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```key``` - Name for the bucket.
@@ -492,8 +442,6 @@ var result = wh_api.deleteInput(account_id, input_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```input_id``` -  (example: INe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ###Destinations
 
 ####Create Destination
@@ -508,8 +456,6 @@ var result = wh_api.createDestination(account_id, input_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```input_id``` -  (example: INe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```name``` (required) - Name for the input. (example: My Final Destination)
@@ -539,8 +485,6 @@ var result = wh_api.updateDestination(account_id, destination_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```destination_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```name``` (required) - Name for the input. (example: My Final Destination)
@@ -570,8 +514,6 @@ var result = wh_api.getDestination(account_id, destination_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```destination_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####List Destination
 
 Returns a collection of destinations.
@@ -584,8 +526,6 @@ var result = wh_api.getDestinations(account_id, input_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```input_id``` -  (example: INe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```destination_key``` - Name for the bucket.
@@ -602,8 +542,6 @@ var result = wh_api.deleteDestination(account_id, destination_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```destination_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ###Providers
 
 ####Create Consumer
@@ -618,8 +556,6 @@ var result = wh_api.createConsumer(account_id, application_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```consumer_id``` (required) - The id for the consumer of the application.  This id should be the unique id from the application provider that identifies this customer/consumer of the application.
@@ -638,8 +574,6 @@ var result = wh_api.getConsumers(account_id, application_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Update Consumer
 
 Updates the details for a particular consumer.
@@ -653,8 +587,6 @@ var result = wh_api.updateConsumer(account_id, application_id, consumer_id, opti
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```consumer_id``` -  (example: my_customer_id)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```name``` (required) - The name of the consumer.  This could be the account name within the provider application for example. (example: ACME Corp, Inc.)
@@ -672,8 +604,6 @@ var result = wh_api.getConsumer(account_id, application_id, consumer_id, options
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```consumer_id``` -  (example: my_customer_id)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Delete Consumer
 
 Removes a consumer from a particular application.
@@ -687,8 +617,6 @@ var result = wh_api.deleteConsumer(account_id, application_id, consumer_id, opti
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```consumer_id``` -  (example: my_customer_id)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####List Consumer destinations
 
 Returns all the destinations for the consumer of a given application.
@@ -702,8 +630,6 @@ var result = wh_api.getConsumerDestinations(account_id, application_id, consumer
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```consumer_id``` -  (example: my_customer_id)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```bucket_key``` (required) - The bucket key the destination shoud be created for. (example: default)
@@ -722,8 +648,6 @@ var result = wh_api.createConsumerDestination(account_id, application_id, consum
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```consumer_id``` -  (example: my_customer_id)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```application_version_id``` (required) - The version of the application the destination should respond to. (example: Webhooks)
@@ -757,8 +681,6 @@ var result = wh_api.updateConsumerDestination(account_id, application_id, consum
 * ```consumer_id``` -  (example: my_customer_id)
 * ```destination_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```application_version_id``` (required) - The version of the application the destination should respond to. (example: Webhooks)
@@ -791,8 +713,6 @@ var result = wh_api.deleteConsumerDestination(account_id, application_id, consum
 * ```consumer_id``` -  (example: my_customer_id)
 * ```destination_id``` -  (example: OUe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####List Consumer Buckets
 
 Returns all the buckets for the consumer of a given application.
@@ -806,8 +726,6 @@ var result = wh_api.getConsumerBuckets(account_id, application_id, consumer_id, 
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```consumer_id``` -  (example: my_customer_id)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Send webhook to consumer
 
 Sends a webhook to a particular consumer of an application for the given bucket_key.
@@ -822,8 +740,6 @@ var result = wh_api.sendConsumerWebhookRequest(account_id, application_id, consu
 * ```consumer_id``` -  (example: my_customer_id)
 * ```bucket_key``` -  (example: development)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Check consumer subscription
 
 Checks to see if the consumer is subscribed to a given event or set of events.  If the event query param is not passed the complete list of events will be returned.
@@ -837,8 +753,6 @@ var result = wh_api.getConsumerSubscription(account_id, application_id, consumer
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```consumer_id``` -  (example: my_customer_id)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```bucket_key``` (required) - The bucket key the subscription should be checked for. (example: development)
@@ -858,8 +772,6 @@ var result = wh_api.getConsumerRequestLog(account_id, application_id, consumer_i
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```consumer_id``` -  (example: my_customer_id)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```start_date``` - The start date for the data.  This can be an exact UTC date or a texted based time period.  Valid text time periods can be found at: http://sugarjs.com/date_formats#text_formats
@@ -880,8 +792,6 @@ var result = wh_api.createClientToken(account_id, application_id, consumer_id, o
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```consumer_id``` -  (example: my_customer_id)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```bucket_key``` - The bucket key the client token should be generated for.  This can be an arbitrary value that maps back to your system. (example: development)
@@ -900,8 +810,6 @@ var result = wh_api.getEmbeddedViewHtml(account_id, application_id, consumer_id,
 * ```application_id``` -  (example: APe987d754d82a419e8c54c2185ed0ef29)
 * ```consumer_id``` -  (example: my_customer_id)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```bucket_key``` - The bucket key the client token should be generated for.  This can be an arbitrary value that maps back to your system. (example: development)
@@ -921,8 +829,6 @@ var result = wh_api.getOverviewReport(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```start_date``` (required) - The start date for the data.
@@ -945,8 +851,6 @@ var result = wh_api.getSummaryReport(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```start_date``` - The start date for the data.
@@ -966,8 +870,6 @@ var result = wh_api.getRequestLog(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```start_date``` - The start date for the data.  This can be an exact UTC date or a texted based time period.  Valid text time periods can be found at: http://sugarjs.com/date_formats#text_formats
@@ -990,8 +892,6 @@ var result = wh_api.getIncomingMessage(account_id, incoming_message_id, options)
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```incoming_message_id``` -  (example: IMe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```include_outgoing_messages``` - If the outgoing messages should be included as well.
@@ -1008,8 +908,6 @@ var result = wh_api.getOutgoingMessage(account_id, outgoing_message_id, options)
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```outgoing_message_id``` -  (example: OMe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Get Outgoing Message Status Details
 
 Returns the basic information regarding the status of the outgoing request.
@@ -1022,8 +920,6 @@ var result = wh_api.getOutgoingMessageStatus(account_id, outgoing_message_id, op
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```outgoing_message_id``` -  (example: OMe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ###Users
 
 ####Login
@@ -1036,8 +932,6 @@ var result = wh_api.login(options);
 #####Parameters
 
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```email_address``` (required) - The user's email address.
@@ -1055,8 +949,6 @@ var result = wh_api.changePassword(account_id, user_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```user_id``` -  (example: USe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```new_password``` (required) - The new password for the account.
@@ -1076,8 +968,6 @@ var result = wh_api.getAPIToken(account_id, user_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```user_id``` -  (example: USe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Reset Password
 
 Allows the user to request their password to be emailed to them.  Really this provides them a link to the change password form.
@@ -1088,8 +978,6 @@ var result = wh_api.resetPassword(options);
 #####Parameters
 
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```email_address``` (required) - The primary email address for the user on the account. (example: bob.smith@example.com)
@@ -1105,8 +993,6 @@ var result = wh_api.lookupPasswordChangeKey(password_change_key, options);
 
 * ```password_change_key``` -  (example: CKe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Create User
 
 Adds a user to an account.
@@ -1118,8 +1004,6 @@ var result = wh_api.createUser(account_id, options);
 
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```first_name``` (required) - First name of the primary user on the account. (example: Bob)
@@ -1142,8 +1026,6 @@ var result = wh_api.updateUser(account_id, user_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```user_id``` -  (example: USe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 #####Options
 
 * ```first_name``` (required) - First name of the primary user on the account. (example: Bob)
@@ -1165,8 +1047,6 @@ var result = wh_api.getUser(account_id, user_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```user_id``` -  (example: USe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####List Users
 
 Returns a collection of users.
@@ -1179,8 +1059,6 @@ var result = wh_api.getUsers(account_id, user_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```user_id``` -  (example: USe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Delete User
 
 Deletes a user.
@@ -1193,8 +1071,6 @@ var result = wh_api.deleteUser(account_id, user_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```user_id``` -  (example: USe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Verify Email Address
 
 Handles validating the email address once the user has clicked the validation link in an email.
@@ -1206,8 +1082,6 @@ var result = wh_api.verifyEmailAddress(email_verification_key, options);
 
 * ```email_verification_key``` -  (example: EV4d3dc5927f304df08ad36c5a3a893c52)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Resend Verification Email
 
 Resends a verification email for a user.
@@ -1220,8 +1094,6 @@ var result = wh_api.resendVerificationEmail(account_id, user_id, options);
 * ```account_id``` -  (example: ACe987d754d82a419e8c54c2185ed0ef29)
 * ```user_id``` -  (example: USe987d754d82a419e8c54c2185ed0ef29)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ###Utils
 
 ####Health Check
@@ -1234,8 +1106,6 @@ var result = wh_api.healthCheck(options);
 #####Parameters
 
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Gets Plans
 
 Returns all the possible public plans.
@@ -1246,8 +1116,6 @@ var result = wh_api.getPlans(options);
 #####Parameters
 
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Get Plan
 
 Returns the details of a specific plan.
@@ -1259,8 +1127,6 @@ var result = wh_api.getPlan(plan_id, options);
 
 * ```plan_id``` -  (example: starter)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Get Timezones
 
 Returns all valid timezones.
@@ -1271,8 +1137,6 @@ var result = wh_api.getTimezones(options);
 #####Parameters
 
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Gets Retry Policies
 
 Returns the possible retry policies along with the system default policy.
@@ -1283,8 +1147,6 @@ var result = wh_api.getRetryPolicies(options);
 #####Parameters
 
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-
 ####Gets Retry Policy
 
 Returns the details of a specific retry policy.
@@ -1296,5 +1158,3 @@ var result = wh_api.getRetryPolicy(policy_id, options);
 
 * ```policy_id``` -  (example: linear)
 * ```options``` - Structure of the possible options.
-* ```callback``` (required) - Function to be called after api call completes. (example: function(error, body){})
-

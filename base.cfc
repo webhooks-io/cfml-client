@@ -26,7 +26,7 @@ component accessors="true" displayname="Webhooks.io Client Library" {
 	private string function expandEndpoint(required string endpoint, required array params){
 		var placeholder = "";
 		var finalEndpoint = "";
-		var replacementCount = 0;
+		var replacementCount = 1;
 
 		for(var i = 1; i <= ListLen(endpoint, '/'); i++){
 			placeholder = listGetAt(endpoint, i, '/');
@@ -35,13 +35,13 @@ component accessors="true" displayname="Webhooks.io Client Library" {
 				placeholder = right(placeholder, len(placeholder)-1);
 
 				if(ArrayLen(params) <= i){
-					finalEndpoint = finalEndpoint +  "/" + params[replacementCount];
+					finalEndpoint = finalEndpoint &  "/" & params[replacementCount];
 				replacementCount++;
 				}else{
-					finalEndpoint = finalEndpoint +  "/" + placeholder;
+					finalEndpoint = finalEndpoint &  "/" & placeholder;
 				}
 			}else{
-				finalEndpoint = finalEndpoint +  "/" + placeholder; 
+				finalEndpoint = finalEndpoint &  "/" & placeholder; 
 			}
 		}
 		return finalEndpoint;
@@ -91,9 +91,6 @@ component accessors="true" displayname="Webhooks.io Client Library" {
 
 		results["http_status_code"] = sendResult.responseheader.status_code;
 		results["http_status_text"] = sendResult.responseheader.explanation;
-		if(getInclude_parsed_response()){
-			results["response_parsed"] = deserializeJson(sendResult.filecontent);
-		}
 		
 		results["response"] = sendResult.filecontent;
 
