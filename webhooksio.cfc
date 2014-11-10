@@ -570,6 +570,133 @@ component accessors="true" displayname="Webhooks.io Client Library" extends="bas
 		}
 
 	/*****************************************************************************/
+	/************************* Related Methods: Recipes **************************/
+	/*****************************************************************************/
+
+		/**
+		 * Adds a Recipe to an account
+		 * 
+		 * POST - /v1/accounts/:account_id/recipes
+		 * 
+		 * Full details can be found at http://webhooks.io/docs/api/#create-recipe
+		 * 
+		 * @method createRecipe
+		 * @param {String} account_id 
+		 * @param {Object} params
+		 * @param {Function} callback
+		*/
+		public any function createRecipe(required string account_id, struct params=StructNew()){
+			var endpoint = this.expandEndpoint('/v1/accounts/:account_id/recipes', [account_id]);
+			return this.execute(endpoint=endpoint, method="POST", params=params);
+		}
+
+		/**
+		 * Updates a Recipe.
+		 * 
+		 * PUT - /v1/accounts/:account_id/recipes/:recipe_id
+		 * 
+		 * Full details can be found at http://webhooks.io/docs/api/#update-recipe
+		 * 
+		 * @method updateRecipe
+		 * @param {String} account_id 
+		 * @param {String} recipe_id 
+		 * @param {Object} params
+		 * @param {Function} callback
+		*/
+		public any function updateRecipe(required string account_id, required string recipe_id, struct params=StructNew()){
+			var endpoint = this.expandEndpoint('/v1/accounts/:account_id/recipes/:recipe_id', [account_id, recipe_id]);
+			return this.execute(endpoint=endpoint, method="PUT", params=params);
+		}
+
+		/**
+		 * Publishes the draft recipe so it can be used as the production recipe.
+		 * 
+		 * POST - /v1/accounts/:account_id/recipes/:recipe_id/publish
+		 * 
+		 * Full details can be found at http://webhooks.io/docs/api/#publish-recipe
+		 * 
+		 * @method publishRecipe
+		 * @param {String} account_id 
+		 * @param {String} recipe_id 
+		 * @param {Object} params
+		 * @param {Function} callback
+		*/
+		public any function publishRecipe(required string account_id, required string recipe_id, struct params=StructNew()){
+			var endpoint = this.expandEndpoint('/v1/accounts/:account_id/recipes/:recipe_id/publish', [account_id, recipe_id]);
+			return this.execute(endpoint=endpoint, method="POST", params=params);
+		}
+
+		/**
+		 * Returns the details for a specfic recipe.
+		 * 
+		 * GET - /v1/accounts/:account_id/recipes/:recipe_id
+		 * 
+		 * Full details can be found at http://webhooks.io/docs/api/#get-recipe
+		 * 
+		 * @method getRecipe
+		 * @param {String} account_id 
+		 * @param {String} recipe_id 
+		 * @param {Object} params
+		 * @param {Function} callback
+		*/
+		public any function getRecipe(required string account_id, required string recipe_id, struct params=StructNew()){
+			var endpoint = this.expandEndpoint('/v1/accounts/:account_id/recipes/:recipe_id', [account_id, recipe_id]);
+			return this.execute(endpoint=endpoint, method="GET", params=params);
+		}
+
+		/**
+		 * Returns a collection of recipes for an account.
+		 * 
+		 * GET - /v1/accounts/:account_id/recipes
+		 * 
+		 * Full details can be found at http://webhooks.io/docs/api/#list-recipe
+		 * 
+		 * @method getRecipes
+		 * @param {String} account_id 
+		 * @param {Object} params
+		 * @param {Function} callback
+		*/
+		public any function getRecipes(required string account_id, struct params=StructNew()){
+			var endpoint = this.expandEndpoint('/v1/accounts/:account_id/recipes', [account_id]);
+			return this.execute(endpoint=endpoint, method="GET", params=params);
+		}
+
+		/**
+		 * Deletes a Recipe.
+		 * 
+		 * DELETE - /v1/accounts/:account_id/recipes/:recipe_id
+		 * 
+		 * Full details can be found at http://webhooks.io/docs/api/#delete-recipe
+		 * 
+		 * @method deleteRecipe
+		 * @param {String} account_id 
+		 * @param {String} recipe_id 
+		 * @param {Object} params
+		 * @param {Function} callback
+		*/
+		public any function deleteRecipe(required string account_id, required string recipe_id, struct params=StructNew()){
+			var endpoint = this.expandEndpoint('/v1/accounts/:account_id/recipes/:recipe_id', [account_id, recipe_id]);
+			return this.execute(endpoint=endpoint, method="DELETE", params=params);
+		}
+
+		/**
+		 * Provides the ability to test a recipe to ensure the output is correct.  The recipe MUST be wrapped in 'function wh(){}' and return exit([data]) as shown in the sample below.
+		 * 
+		 * PUT - /v1/accounts/:account_id/recipes/test
+		 * 
+		 * Full details can be found at http://webhooks.io/docs/api/#test-recipe
+		 * 
+		 * @method testRecipe
+		 * @param {String} account_id 
+		 * @param {Object} params
+		 * @param {Function} callback
+		*/
+		public any function testRecipe(required string account_id, struct params=StructNew()){
+			var endpoint = this.expandEndpoint('/v1/accounts/:account_id/recipes/test', [account_id]);
+			return this.execute(endpoint=endpoint, method="PUT", params=params);
+		}
+
+	/*****************************************************************************/
 	/************************* Related Methods: Providers **************************/
 	/*****************************************************************************/
 
